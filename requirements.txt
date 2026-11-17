@@ -1,0 +1,25 @@
+# 训练与数据处理
+pandas>=2.0
+scikit-learn>=1.3
+numpy>=1.24
+
+# 深度学习
+torch>=2.1
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.30
+sentencepiece
+jieba
+
+# 向量检索（相似历史工单）
+faiss-cpu
+
+# 服务端
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+python-multipart
+
+# 工具
+pyyaml
+tqdm

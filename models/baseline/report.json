@@ -1,0 +1,242 @@
+{
+  "model": "tfidf-char1-3 + LinearSVC(sigmoid)",
+  "data": "data\\synth\\tickets.csv",
+  "category": {
+    "accuracy": 0.8056,
+    "macro_f1": 0.7581,
+    "n_train": 431,
+    "n_test": 108,
+    "n_features": 1552,
+    "labels": [
+      "plumbing",
+      "carpentry",
+      "network",
+      "cleaning",
+      "hvac",
+      "other"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        19,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        17,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        19,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        15,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        19
+      ]
+    ],
+    "threshold_sweep": [
+      {
+        "threshold": 0.3,
+        "coverage": 1.0,
+        "accuracy": 0.8056
+      },
+      {
+        "threshold": 0.35,
+        "coverage": 0.972,
+        "accuracy": 0.8095
+      },
+      {
+        "threshold": 0.4,
+        "coverage": 0.954,
+        "accuracy": 0.8058
+      },
+      {
+        "threshold": 0.45,
+        "coverage": 0.833,
+        "accuracy": 0.8333
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.796,
+        "accuracy": 0.8488
+      },
+      {
+        "threshold": 0.55,
+        "coverage": 0.685,
+        "accuracy": 0.8649
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.537,
+        "accuracy": 0.9138
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.454,
+        "accuracy": 0.9592
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.324,
+        "accuracy": 0.9714
+      },
+      {
+        "threshold": 0.75,
+        "coverage": 0.259,
+        "accuracy": 0.9643
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.204,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.85,
+        "coverage": 0.148,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.111,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.0,
+        "accuracy": 0.0
+      }
+    ]
+  },
+  "urgency": {
+    "accuracy": 0.7778,
+    "macro_f1": 0.5385,
+    "n_train": 431,
+    "n_test": 108,
+    "n_features": 1552,
+    "labels": [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        9
+      ],
+      [
+        0,
+        29,
+        5
+      ],
+      [
+        0,
+        10,
+        55
+      ]
+    ],
+    "threshold_sweep": [
+      {
+        "threshold": 0.3,
+        "coverage": 1.0,
+        "accuracy": 0.7778
+      },
+      {
+        "threshold": 0.35,
+        "coverage": 1.0,
+        "accuracy": 0.7778
+      },
+      {
+        "threshold": 0.4,
+        "coverage": 1.0,
+        "accuracy": 0.7778
+      },
+      {
+        "threshold": 0.45,
+        "coverage": 1.0,
+        "accuracy": 0.7778
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.972,
+        "accuracy": 0.781
+      },
+      {
+        "threshold": 0.55,
+        "coverage": 0.944,
+        "accuracy": 0.7843
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.907,
+        "accuracy": 0.8061
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.843,
+        "accuracy": 0.8242
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.759,
+        "accuracy": 0.8537
+      },
+      {
+        "threshold": 0.75,
+        "coverage": 0.657,
+        "accuracy": 0.9014
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.519,
+        "accuracy": 0.9643
+      },
+      {
+        "threshold": 0.85,
+        "coverage": 0.37,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.324,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.95,
+        "coverage": 0.157,
+        "accuracy": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# 仅推理需要的依赖（镜像小、构建快 ~400MB）
+# 模型相关的包锁死版本，避免 joblib 反序列化时版本不兼容
+fastapi>=0.110
+uvicorn[standard]>=0.29
+scikit-learn==1.9.1
+numpy==2.5.4
+joblib==1.6.0
+pydantic>=2.6,<3
