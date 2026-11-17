@@ -121,6 +121,7 @@ https://<你的地址>/api/health
 | `ModuleNotFoundError: fastapi` | 依赖没装 | 检查 `requirements-serve.txt` 是否被 COPY |
 | 页面能开但预测报 500 | 模型文件缺失 | 确认 `models/baseline/model.joblib` 在仓库里 |
 | `InconsistentVersionWarning` | sklearn 版本不一致 | `requirements-serve.txt` 已锁版本，确认没被改动 |
+| `Could not find a version that satisfies numpy==2.5.4` + `Requires-Python >=3.12` | **版本号是从本地 Python 3.15 抄的，但镜像用 3.11** | 降到该 Python 版本支持的最高版（如实测 3.11 → numpy 2.4.6） |
 | 首次访问很慢（20 秒+） | 免费实例冷启动 | 正常现象，说明里写一句"首次访问需等待" |
 
 ---

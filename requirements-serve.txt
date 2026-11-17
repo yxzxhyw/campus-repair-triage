@@ -1,8 +1,14 @@
 # 仅推理需要的依赖（镜像小、构建快 ~400MB）
-# 模型相关的包锁死版本，避免 joblib 反序列化时版本不兼容
+#
+# ⚠️ numpy 版本为什么是 2.4.6 而不是本地的 2.5.4：
+#    numpy 2.5.x 要求 Python >= 3.12，而镜像用的是 python:3.11-slim（3.11 更稳）。
+#    3.11 能装的最高版本是 2.4.6。
+#    用不同小版本加载模型没问题——numpy 2.x 的 pickle 格式在 2.4/2.5 之间兼容。
+#
+# 若将来换到 python:3.12-slim，可以改回 numpy==2.5.4
 fastapi>=0.110
 uvicorn[standard]>=0.29
 scikit-learn==1.9.1
-numpy==2.5.4
+numpy==2.4.6
 joblib==1.6.0
 pydantic>=2.6,<3
