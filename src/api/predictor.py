@@ -17,9 +17,13 @@ MODEL_PATH = Path(os.getenv("MODEL_PATH", ROOT / "models" / "baseline" / "model.
 
 # 置信度低于这个值 → 建议人工复核
 # 依据：models/baseline/report.json 的阈值扫描
-#   0.50 → 自动处理 79.6%，准确率 84.9%
+#   0.50 → 自动处理 79.6%，准确率 84.9%（每 6 次错 1 次，对调度太危险）
 #   0.65 → 自动处理 45.4%，准确率 95.9%
-REVIEW_THRESHOLD = float(os.getenv("REVIEW_THRESHOLD", "0.50"))
+#   0.70 → 自动处理 32.4%，准确率 97.1%
+# 取 0.65：错派一次的代价（工人白跑 + 问题延误）远高于多点一次确认。
+# 想调整可以用环境变量，不用改代码：
+#   $env:REVIEW_THRESHOLD="0.5"   （激进，自动处理多但错得多）
+REVIEW_THRESHOLD = float(os.getenv("REVIEW_THRESHOLD", "0.65"))
 
 CAT_META = {
     "plumbing":  {"name": "水电维修", "group": "水电班",   "desc": "漏水、跳闸、电路、下水道、灯具"},
